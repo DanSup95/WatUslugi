@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WatUslugi</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f0f0f5;
+      color: #333;
+    }
+
+    header {
+      background-color: #007bff;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    header nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+    }
+
+    header nav ul li {
+      margin: 0 20px;
+    }
+
+    header nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    header nav ul li a:hover {
+      color: #f8f9fa;
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 60px 0;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      color: #007bff;
+      margin-bottom: 30px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 40px;
+      color: #666;
+    }
+
+    .service-cards {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+
+    .service-card {
+      background-color: white;
+      width: 280px;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    .service-card h3 {
+      color: #007bff;
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+    }
+
+    .service-card p {
+      color: #666;
+      margin-bottom: 25px;
+    }
+
+    .service-card button {
+      padding: 12px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1.1rem;
+      transition: background-color 0.3s;
+    }
+
+    .service-card button:hover {
+      background-color: #0056b3;
+    }
+
+    .service-details {
+      display: none;
+      font-size: 1rem;
+      color: #555;
+      margin-top: 20px;
+      line-height: 1.5;
+    }
+
+    .contact-info {
+      font-size: 1.2rem;
+      color: #333;
+      margin-top: 20px;
+    }
+
+    .contact-info a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 1rem;
+      margin-top: 50px;
+    }
+
+    .old-price {
+      text-decoration: line-through;
+      color: #888;
+    }
+
+    .new-price {
+      color: #007bff;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    /* Уведомление об условиях */
+    .terms-notice {
+      background-color: #f8f9fa;
+      padding: 15px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #333;
+      margin-top: 40px;
+      border-top: 1px solid #ddd;
+    }
+
+    .terms-notice a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    .terms-notice a:hover {
+      text-decoration: underline;
+    }
+
+    /* Гарантия возврата денег */
+    .money-back-guarantee {
+      background-color: #f8f9fa;
+      padding: 20px;
+      text-align: center;
+      font-size: 1.1rem;
+      color: #333;
+      margin-top: 40px;
+      border-top: 1px solid #ddd;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Навигация -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home">Главная</a></li>
+        <li><a href="#services">Услуги</a></li>
+        <li><a href="#contact">Контакты</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Главная секция -->
+  <section id="home">
+    <h1>Добро пожаловать на сайт WatUslugi!</h1>
+    <p>Я предоставляю высококачественные услуги по созданию веб-сайтов, логотипов, видео-превью и дизайну. Здесь вы можете узнать больше обо всех моих предложениях.</p>
+  </section>
+
+  <!-- Услуги -->
+  <section id="services">
+    <h2>Наши Услуги</h2>
+    <div class="service-cards">
+      <!-- Услуга 1 -->
+      <div class="service-card">
+        <h3>Создание Веб-Сайтов</h3>
+        <p>Разработаю сайт, который идеально подойдет под ваши потребности, будь то личный сайт или корпоративный проект.</p>
+        <p><span class="old-price">70$</span> <span class="new-price">от 55$</span></p>
+        <button onclick="toggleDetails('web-development')">Подробнее</button>
+        <div id="web-development" class="service-details">
+          <p>Создание адаптивных сайтов, разработка интернет-магазинов, блогов, а также корпоративных порталов с уникальным дизайном и функциональностью.</p>
+        </div>
+      </div>
+      <!-- Услуга 2 -->
+      <div class="service-card">
+        <h3>Создание Превью для Видео</h3>
+        <p>Создам креативные и привлекательные превью для ваших видеороликов.</p>
+        <p><span class="old-price">57$</span> <span class="new-price">от 45$</span></p>
+        <button onclick="toggleDetails('video-preview')">Подробнее</button>
+        <div id="video-preview" class="service-details">
+          <p>Я разработаю стильные превью для ваших видео, которые помогут привлечь внимание зрителей и повысить кликабельность.</p>
+        </div>
+      </div>
+      <!-- Услуга 3 -->
+      <div class="service-card">
+        <h3>Создание Логотипов</h3>
+        <p>Я помогу вам создать логотип, который будет отражать уникальность вашего бренда.</p>
+        <p><span class="old-price">80$</span> <span class="new-price">от 65$</span></p>
+        <button onclick="toggleDetails('logo-design')">Подробнее</button>
+        <div id="logo-design" class="service-details">
+          <p>Ваш логотип — это лицо вашего бренда. Я создам логотип, который будет легко запоминающимся и отличать вашу компанию от других.</p>
+        </div>
+      </div>
+      <!-- Услуга 4 -->
+      <div class="service-card">
+        <h3>Дизайн</h3>
+        <p>Предлагаю услуги по разработке дизайна для вашего сайта или рекламных материалов.</p>
+        <p><span class="old-price">58$</span> <span class="new-price">от 45$</span></p>
+        <button onclick="toggleDetails('graphic-design')">Подробнее</button>
+        <div id="graphic-design" class="service-details">
+          <p>Разработаю уникальные и современные графические элементы, которые сделают ваш сайт или рекламу более привлекательными.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Гарантия возврата денег -->
+  <div class="money-back-guarantee">
+    <p><strong>Гарантия возврата денег:</strong> Если ваш заказ не будет выполнен качественно или не будет соответствовать вашим требованиям, мы вернем вам деньги!</p>
+  </div>
+
+  <!-- Контакты -->
+  <section id="contact">
+    <h2>Связаться со мной</h2>
+    <p class="contact-info">Для связи со мной напишите на электронную почту: <a href="mailto:dansup95@gmail.com">dansup95@gmail.com</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; WatUslugi</p>
+  </footer>
+
+  <!-- Уведомление о соглашении -->
+  <div class="terms-notice">
+    <p>Заходя на этот сайт, вы соглашаетесь с <a href="#">условиями пользования</a> и <a href="#">политикой конфиденциальности</a>.</p>
+  </div>
+
+  <script>
+    // Функция для отображения/скрытия подробностей услуги
+    function toggleDetails(serviceId) {
+      const details = document.getElementById(serviceId);
+      details.style.display = details.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+
+</body>
+</html>
